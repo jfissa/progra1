@@ -1,0 +1,39 @@
+// funcionescalculovalorganado.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float MontoTotal(float h, float c);
+
+int main()
+{
+	float hora, costo, MT, s=0;
+	int empleados;
+	cout <<"ingrese el numero de empleados:";
+	cin>> empleados;
+	for (int i=1;i<=empleados;i++)
+	{
+	cout <<"ingrese el numero de hora:";
+	cin>> hora;
+	cout <<"ingrese el valor de costo:";
+	cin>> costo;
+	MT= MontoTotal(hora, costo);
+	cout<< "El monto del trabajador por hora es: " << MT << "BS."<<endl;
+	s=s+MT;
+	getch();
+	}
+	cout<<"el monto total de los empleados:" <<s <<endl;
+	getch();
+	return 0;
+}	
+	
+	float MontoTotal(float h, float c)
+
+{
+  float TOTAL= h*c;
+  return TOTAL; 
+}
